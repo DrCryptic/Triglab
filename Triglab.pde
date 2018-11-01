@@ -18,9 +18,8 @@ void setup() {
 
 void draw() {
   background(0); //background color
-  fill(255, 255, 0);
-  ellipse(width/2, height/2, 100, 100);
-  fill(255, 255, 0);
+  fill(random(150, 255), random(150,255), 0);
+  ellipse(width/2, height/2, 90, 90);
   circle(width/2, height/2);
   moons();
   theta++;
@@ -28,7 +27,7 @@ void draw() {
 }
 
 void circle(float a, float b) {
-  fill(255, 0, 0);
+  fill(random(40, 255), 0, 0);
   earth1X =a+200*cos(radians(theta));
   earth1Y =b-200*sin(radians(theta));
   earth2X =a-200*cos(radians(theta));
@@ -42,7 +41,8 @@ void circle(float a, float b) {
   ellipse(earth3X, earth3Y, 50, 50);
   ellipse(earth4X, earth4Y, 50, 50);
 }
-void moons(){
+void moons() {
+  fill(random(255), random(255), random(255));
   ellipse(earth1X+100*cos(radians(moonTheta)), earth1Y-100*sin(radians(moonTheta)), 10, 10);
   ellipse(earth2X-100*cos(radians(moonTheta)), earth2Y+100*sin(radians(moonTheta)), 10, 10);
   ellipse(earth3X-100*cos(radians(moonTheta)), earth3Y-100*sin(radians(moonTheta)), 10, 10);
