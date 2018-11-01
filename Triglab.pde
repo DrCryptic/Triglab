@@ -1,4 +1,4 @@
-float theta;
+int theta = 0;
 
 
 
@@ -9,12 +9,18 @@ void setup() {
 }
 
 void draw() {
-   background(0); //background color
-  
-  ellipse(width/2, height/2,50,50);
+  background(0); //background color
+  fill(255, 255, 0);
+  ellipse(width/2, height/2, 100, 100);
+  fill(255, 255, 0);
+  circle(width/2, height/2);
+  theta++;
 }
 
-void circle(){
-  
-  ellipse(a+200 cos(radians(theta)), b+200 sin(radians(theta)) );
-  }
+void circle(float a, float b) {
+  fill(255, 0, 0);
+  ellipse(a+200*cos(radians(theta)), b-200*sin(radians(theta)), 50, 50);
+  ellipse(a-200*cos(radians(theta)), b+200*sin(radians(theta)), 50, 50);
+  ellipse(a-200*cos(radians(theta)), b-200*sin(radians(theta)), 50, 50);
+  ellipse(a+200*cos(radians(theta)), b+200*sin(radians(theta)), 50, 50);
+}
